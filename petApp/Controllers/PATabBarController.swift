@@ -27,7 +27,8 @@ class PATabBarController: UITabBarController {
     
     
     func createHomeNC() -> UINavigationController {
-        let homeVC = PAHomeViewController()
+        let vm = PAHomeViewViewModel()
+        let homeVC = PAHomeViewController(viewModel: vm)
         homeVC.title = "Home"
         homeVC.tabBarItem = UITabBarItem(title: "Home",
                                              image: UIImage(systemName: "house"),

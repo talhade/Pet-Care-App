@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC4817AA2B442A0700FD4F7C /* PAHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4817A92B442A0700FD4F7C /* PAHomeView.swift */; };
+		BC4817AC2B442A2500FD4F7C /* PAHomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4817AB2B442A2500FD4F7C /* PAHomeViewViewModel.swift */; };
 		BCF245FC2B348A000004CF73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF245FB2B348A000004CF73 /* AppDelegate.swift */; };
 		BCF245FE2B348A000004CF73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF245FD2B348A000004CF73 /* SceneDelegate.swift */; };
-		BCF246002B348A000004CF73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF245FF2B348A000004CF73 /* ViewController.swift */; };
 		BCF246062B348A000004CF73 /* petApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCF246042B348A000004CF73 /* petApp.xcdatamodeld */; };
 		BCF246082B348A000004CF73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCF246072B348A000004CF73 /* Assets.xcassets */; };
 		BCF2460B2B348A000004CF73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF246092B348A000004CF73 /* LaunchScreen.storyboard */; };
@@ -20,10 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC4817A92B442A0700FD4F7C /* PAHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAHomeView.swift; sourceTree = "<group>"; };
+		BC4817AB2B442A2500FD4F7C /* PAHomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAHomeViewViewModel.swift; sourceTree = "<group>"; };
 		BCF245F82B348A000004CF73 /* petApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF245FB2B348A000004CF73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCF245FD2B348A000004CF73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCF245FF2B348A000004CF73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BCF246052B348A000004CF73 /* petApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = petApp.xcdatamodel; sourceTree = "<group>"; };
 		BCF246072B348A000004CF73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCF2460A2B348A000004CF73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,6 +47,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC4817A22B44289A00FD4F7C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCF246142B348F430004CF73 /* PATabBarController.swift */,
+				BCF246192B3490390004CF73 /* PAHomeViewController.swift */,
+				BCF246172B348FF50004CF73 /* PACalendarViewController.swift */,
+				BCF2461B2B3490750004CF73 /* PAStorageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BC4817A42B4428D000FD4F7C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BC4817AB2B442A2500FD4F7C /* PAHomeViewViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BC4817A52B4428EB00FD4F7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BCF245EF2B3489FF0004CF73 = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +92,12 @@
 		BCF245FA2B348A000004CF73 /* petApp */ = {
 			isa = PBXGroup;
 			children = (
+				BC4817A52B4428EB00FD4F7C /* Models */,
+				BC4817A42B4428D000FD4F7C /* ViewModels */,
+				BC4817A22B44289A00FD4F7C /* Controllers */,
 				BCF246122B348ED00004CF73 /* Views */,
 				BCF245FB2B348A000004CF73 /* AppDelegate.swift */,
 				BCF245FD2B348A000004CF73 /* SceneDelegate.swift */,
-				BCF245FF2B348A000004CF73 /* ViewController.swift */,
 				BCF246072B348A000004CF73 /* Assets.xcassets */,
 				BCF246092B348A000004CF73 /* LaunchScreen.storyboard */,
 				BCF2460C2B348A000004CF73 /* Info.plist */,
@@ -79,28 +109,9 @@
 		BCF246122B348ED00004CF73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BCF246162B348FC30004CF73 /* Screens */,
-				BCF246132B348EEB0004CF73 /* TabBarControllers */,
+				BC4817A92B442A0700FD4F7C /* PAHomeView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		BCF246132B348EEB0004CF73 /* TabBarControllers */ = {
-			isa = PBXGroup;
-			children = (
-				BCF246142B348F430004CF73 /* PATabBarController.swift */,
-			);
-			path = TabBarControllers;
-			sourceTree = "<group>";
-		};
-		BCF246162B348FC30004CF73 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				BCF246172B348FF50004CF73 /* PACalendarViewController.swift */,
-				BCF246192B3490390004CF73 /* PAHomeViewController.swift */,
-				BCF2461B2B3490750004CF73 /* PAStorageViewController.swift */,
-			);
-			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,11 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4817AA2B442A0700FD4F7C /* PAHomeView.swift in Sources */,
 				BCF246152B348F430004CF73 /* PATabBarController.swift in Sources */,
 				BCF246182B348FF50004CF73 /* PACalendarViewController.swift in Sources */,
-				BCF246002B348A000004CF73 /* ViewController.swift in Sources */,
 				BCF246062B348A000004CF73 /* petApp.xcdatamodeld in Sources */,
 				BCF245FC2B348A000004CF73 /* AppDelegate.swift in Sources */,
+				BC4817AC2B442A2500FD4F7C /* PAHomeViewViewModel.swift in Sources */,
 				BCF2461C2B3490750004CF73 /* PAStorageViewController.swift in Sources */,
 				BCF2461A2B34903A0004CF73 /* PAHomeViewController.swift in Sources */,
 				BCF245FE2B348A000004CF73 /* SceneDelegate.swift in Sources */,
