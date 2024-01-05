@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC2866152B4840B900D6BD2B /* PAPetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2866142B4840B900D6BD2B /* PAPetCell.swift */; };
+		BC2866172B48414E00D6BD2B /* PABodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2866162B48414E00D6BD2B /* PABodyLabel.swift */; };
 		BC4817AA2B442A0700FD4F7C /* PAHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4817A92B442A0700FD4F7C /* PAHomeView.swift */; };
 		BC4817AC2B442A2500FD4F7C /* PAHomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4817AB2B442A2500FD4F7C /* PAHomeViewViewModel.swift */; };
 		BCF245FC2B348A000004CF73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF245FB2B348A000004CF73 /* AppDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC2866142B4840B900D6BD2B /* PAPetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAPetCell.swift; sourceTree = "<group>"; };
+		BC2866162B48414E00D6BD2B /* PABodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PABodyLabel.swift; sourceTree = "<group>"; };
 		BC4817A92B442A0700FD4F7C /* PAHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAHomeView.swift; sourceTree = "<group>"; };
 		BC4817AB2B442A2500FD4F7C /* PAHomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAHomeViewViewModel.swift; sourceTree = "<group>"; };
 		BCF245F82B348A000004CF73 /* petApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC28660F2B483C0600D6BD2B /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				BC2866142B4840B900D6BD2B /* PAPetCell.swift */,
+				BC2866162B48414E00D6BD2B /* PABodyLabel.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		BC4817A22B44289A00FD4F7C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +107,8 @@
 			children = (
 				BC4817A52B4428EB00FD4F7C /* Models */,
 				BC4817A42B4428D000FD4F7C /* ViewModels */,
-				BC4817A22B44289A00FD4F7C /* Controllers */,
 				BCF246122B348ED00004CF73 /* Views */,
+				BC4817A22B44289A00FD4F7C /* Controllers */,
 				BCF245FB2B348A000004CF73 /* AppDelegate.swift */,
 				BCF245FD2B348A000004CF73 /* SceneDelegate.swift */,
 				BCF246072B348A000004CF73 /* Assets.xcassets */,
@@ -109,6 +122,7 @@
 		BCF246122B348ED00004CF73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BC28660F2B483C0600D6BD2B /* Custom */,
 				BC4817A92B442A0700FD4F7C /* PAHomeView.swift */,
 			);
 			path = Views;
@@ -192,6 +206,8 @@
 				BC4817AC2B442A2500FD4F7C /* PAHomeViewViewModel.swift in Sources */,
 				BCF2461C2B3490750004CF73 /* PAStorageViewController.swift in Sources */,
 				BCF2461A2B34903A0004CF73 /* PAHomeViewController.swift in Sources */,
+				BC2866172B48414E00D6BD2B /* PABodyLabel.swift in Sources */,
+				BC2866152B4840B900D6BD2B /* PAPetCell.swift in Sources */,
 				BCF245FE2B348A000004CF73 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
