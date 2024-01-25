@@ -9,12 +9,23 @@ import UIKit
 
 final class PAHomeViewViewModel{
     
-    enum SectionType: CaseIterable {
-        case header
-        case main
+    enum SectionType {
+        case header(viewModels: [PAHeaderCollectionViewCellViewModel])
+        case main(viewModel: PAMainCollectionViewCellViewModel)
     }
     
-    public let sections = SectionType.allCases
+    public var sections: [SectionType] = []
+    
+    init() {
+        setUpSections()
+    }
+    
+    private func setUpSections(){
+        sections = [
+            .header(viewModels: [.init(), .init(), .init(), .init(), .init(), .init(),]),
+            .main(viewModel: .init())
+        ]
+    }
     
     public func createHeaderSectionLayout() -> NSCollectionLayoutSection{
         let item = NSCollectionLayoutItem(

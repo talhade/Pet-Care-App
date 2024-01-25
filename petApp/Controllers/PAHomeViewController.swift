@@ -54,24 +54,36 @@ extension PAHomeViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch section{
-        case 0:
-            return 10 
-        case 1:
-            return 4
-        default:
-            return 0
+        let sectionType = viewModel.sections[section]
+        switch sectionType{
+        case .header(let viewModels):
+            return viewModels.count
+        case .main:
+            return 1
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .systemCyan
-        if indexPath.section == 0{
-            cell.backgroundColor = .systemCyan
-        } else {
-            cell.backgroundColor = .systemPink
+        let sectionType = viewModel.sections[indexPath.section]
+        
+        switch sectionType{
+        case .header(let viewModels):
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PAHeaderCollectionViewCell.cellIdentifier,
+                for: indexPath
+            )as? PAHeaderCollectionViewCell else {
+                fatalError()
+            }
+            cell.configure(with: viewModels[indexPath.row])
+            return cell
+        case .main(let viewModel):
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PAMainCollectionViewCell.cellIdentifier,
+                for: indexPath
+            )as? PAMainCollectionViewCell else {
+                fatalError()
+            }
+            cell.configure(with: viewModel)
+            cell.backgroundColor = .systemBlue
+            return cell
         }
-        return cell
     }
 }

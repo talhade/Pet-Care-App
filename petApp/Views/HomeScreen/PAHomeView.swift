@@ -42,8 +42,10 @@ final class PAHomeView: UIView {
             return self.createSection(for: sectionIndex)
         }
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self,
-                                forCellWithReuseIdentifier: "cell")
+        collectionView.register(PAHeaderCollectionViewCell.self,
+                                forCellWithReuseIdentifier: PAHeaderCollectionViewCell.cellIdentifier)
+        collectionView.register(PAMainCollectionViewCell.self,
+                                forCellWithReuseIdentifier: PAMainCollectionViewCell.cellIdentifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }
