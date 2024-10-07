@@ -18,7 +18,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/username/pet-care-app.git
+   git clone https://github.com/talhade/Pet-Care-App.git
 2. **Open in Xcode**:  
    Open the project in Xcode and ensure that all dependencies are resolved.
 
